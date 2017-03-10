@@ -44,7 +44,7 @@
             [ "MicrosoftWindowsServer", "WindowsServer", "2016-Datacenter", "windows" ],
             [ "Canonical", "UbuntuServer", "16.04-LTS", "linux" ]
         ],
-        "vmTemplate": "[concat(variables('resourcesUrl'), '/vm-', variables('vmOS')[parameters('vm-settings').type][3], '.template.json')]"
+        "vmTemplate": "[concat(variables('resourcesUrl'), '/vm-', variables('vmOS')[parameters('vm-settings').type][3], '.template-cvm1.json')]"
 },
 "resources": [
         {
