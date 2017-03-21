@@ -141,7 +141,7 @@
             }
         },
         {
-            "name": "[concat('virtual-machine-', copyindex())]",
+            "name": "[concat('virtual-machine-', copyIndex())]",
             "copy": {
                 "name": "vmLoop",
                 "count": "[variables('vmCount')]"
@@ -150,7 +150,7 @@
             "apiVersion": "2016-09-01",
             "dependsOn": [
                 "[resourceId('Microsoft.Resources/deployments', 'shared-resources')]",
-                "[resourceId('Microsoft.Resources/deployments', concat('network-interface-', copyindex()))]"
+                "[resourceId('Microsoft.Resources/deployments', concat('network-interface-', copyIndex()))]"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -168,7 +168,7 @@
                     },
                     "vm-settings": {
                         "value": {
-                            "name": "[concat(variables('vmNamePrefix'), copyindex())]",
+                            "name": "[concat(variables('vmNamePrefix'), copyIndex())]",
                             "adminUserName": "[parameters('vm-settings').adminUserName]",
                             "adminPassword": "[parameters('vm-settings').adminPassword]",
                             "avsID": "[reference('shared-resources').outputs.avsID.value]",
