@@ -99,7 +99,7 @@
             }
         },
         {
-            "name": "[concat('network-interface-', copyindex())]",
+            "name": "[concat('network-interface-', copyIndex())]",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-09-01",
             "copy": {
@@ -118,7 +118,7 @@
                 "parameters": {
                     "nic-settings": {
                         "value": {
-                            "name": "[concat(variables('nicNamePrefix'), copyindex())]",
+                            "name": "[concat(variables('nicNamePrefix'), copyIndex())]",
                             "ipConfigurations": [
                                 {
                                     "name": "ipconfig1",
