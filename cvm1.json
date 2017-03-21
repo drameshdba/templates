@@ -175,7 +175,7 @@
                             "imagePublisher": "[variables('vmOS')[parameters('vm-settings').type][0]]",
                             "imageOffer": "[variables('vmOS')[parameters('vm-settings').type][1]]",
                             "imageSku": "[variables('vmOS')[parameters('vm-settings').type][2]]",
-                            "nicID": "[reference(concat('network-interface-', copyindex())).outputs.nicID.value]",
+                            "nicID": "[reference(concat('network-interface-', copyIndex())).outputs.nicID.value]",
                             "vmSize": "Standard_A0",
                             "storageAccountContainerName": "[toLower(concat(resourceGroup().name, '-', uniqueString(resourceGroup().id, deployment().name)))]"
                         }
