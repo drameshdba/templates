@@ -141,7 +141,7 @@
             }
         },
         {
-            "name": "[concat('virtual-machine-', copyIndex())]",
+             "name": "[concat(variables('vmNamePrefix'), copyindex())]",
             "copy": {
                 "name": "vmLoop",
                 "count": "[variables('vmCount')]"
