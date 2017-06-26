@@ -39,7 +39,7 @@
         "nicNamePrefix": "vm-nic-",
         "nicTemplate": "[concat(variables('resourcesUrl'), '/', 'nic.template.json')]",
         "vmCount": "[parameters('vm-settings').count]",
-        "vmNamePrefix": "vm",
+        "vmNamePrefix": "vm-",
         "vmOS": [
             [ "MicrosoftWindowsServer", "WindowsServer", "2016-Datacenter", "windows" ],
             [ "Canonical", "UbuntuServer", "16.04-LTS", "linux" ]
